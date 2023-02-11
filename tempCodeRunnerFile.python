@@ -1,0 +1,10 @@
+x = int(input())
+output = ""
+
+for i in range(len(str(x))):
+    if(str(x)[i] == '0'):
+        output += "5"
+    else:
+        output += str(x)[i] 
+
+print(output)

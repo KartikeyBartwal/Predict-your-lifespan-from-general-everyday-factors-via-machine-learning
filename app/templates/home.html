@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+
+</head>
+
+<!--  -->
+
+<body style="background-color: #101728;">
+    <div class="image-container">
+        <img src="{% static '\images\page1.png' %}">
+        <img src="{% static '\images\Personal Life.png' %}">
+        <img src="{% static '\images\Life Events.png' %}">
+        <img src="{% static '\images\Fitness.png' %}">
+        <img src="{% static '\images\LifeStyle.png' %}">
+        <img src="{% static '\images\Mental Wellbeing.png' %}">
+        <img src="{% static '\images\ContactUs.png' %}">
+    </div>
+
+    <!-- Gender -->
+    <!-- <form action="/home/outputPage" method="POST"> -->
+    <form method="POST">
+
+        {% csrf_token %}
+        <div class="gender-container">
+            <div class="gender-option">
+                <input type="radio" name="gender" id="male" value="male">
+                <label for="male"></label>
+                <span> </span>
+            </div>
+            <div class="gender-option">
+                <input type="radio" name="gender" id="female" value="female">
+                <label for="female"></label>
+                <span> </span>
+            </div>
+        </div>
+        <!-- Age -->
+        <div class="Age-container">
+            <input type="range" min="18" max="80" value="25" class="Age" name="Age" id="Age">
+            <p style="float:right;">Age: <span id="Age_value">25</span></p>
+        </div>
+        <!-- Weight -->
+        <div class="Weight-container">
+            <input type="range" min="40" max="200" value="60" class="Weight" name="Weight" id="Weight">
+            <p style="float:left;">Weight: <span id="Weight_value">60</span></p>
+        </div>
+        <!-- Height -->
+        <div class="Height-container">
+            <input type="range" min="130" max="240" value="167" class="Height" name="Height" id="Height">
+            <p style="float:right;">Height: <span id="Height_value">167</span></p>
+        </div>
+
+
+        <!-- Annual Income -->
+        <div class="AnnualIncome-container">
+            <input type="range" min="2" max="100" value="8" name="AnnualIncome" class="AnnualIncome" id="AnnualIncome">
+            <p style="float:left;">Income in LPA: <span id="AnnualIncome_value"></span></p>
+        </div>
+        <!-- Marital Status -->
+        <div class="MaritalStatus-container">
+            <div class="MaritalStatus-option">
+                <input type="radio" name="MaritalStatus" id="married" value="married">
+                <label for="married"></label>
+            </div>
+            <div class="MaritalStatus-option">
+                <input type="radio" name="MaritalStatus" id="not_married" value="not_married">
+                <label for="not_married"></label>
+            </div>
+            <div class="MaritalStatus-option">
+                <input type="radio" name="MaritalStatus" id="divorced" value="divorced">
+                <label for="divorced"></label>
+            </div>
+            <div class="MaritalStatus-option">
+                <input type="radio" name="MaritalStatus" id="prefer_not_to_say" value="prefer_not_to_say">
+                <label for="prefer_not_to_say"></label>
+            </div>
+        </div>
+
+        <!-- Fitness (General Health)-->
+        <div class="fitness-container">
+            <div class="fitness-option">
+                <input type="radio" name="fitness" id="poor" value="poor">
+                <label for="poor "></label>
+            </div>
+            <div class="fitness-option">
+                <input type="radio" name="fitness" id="fair" value="fair">
+                <label for="fair"></label>
+            </div>
+            <div class="fitness-option">
+                <input type="radio" name="fitness" id="good" value="good">
+                <label for="good"></label>
+            </div>
+
+            <div class="fitness-option">
+                <input type="radio" name="fitness" id="VeryGood" value="VeryGood">
+                <label for="VeryGood"></label>
+            </div>
+            <div class="fitness-option">
+                <input type="radio" name="fitness" id="excellent" value="excellent">
+                <label for="excellent"></label>
+            </div>
+        </div>
+
+        <!-- Exercise -->
+        <div class="Exercise-container">
+            <input type="range" min="0" max="7" value="2" class="Exercise" name="Exercise" id="Exercise">
+            <p style="float:left;"><b>Exercise count per week:</b> <span id="Exercise_value">2</span></p>
+        </div>
+        <!-- Diabetic -->
+        <div class="diabetic-container">
+            <div class="diabetic-option">
+                <input type="radio" name="diabetic" id="Yes" value="Yes">
+                <label for="Yes"></label>
+            </div>
+            <div class="diabetic-option">
+                <input type="radio" name="diabetic" id="No" value="No">
+                <label for="No"></label>
+            </div>
+        </div>
+        <!-- Alcohol -->
+        <div class="Alcohol-container">
+            <input type="range" min="0" max="12" value="1" class="Alcohol" name="Alcohol" id="Alcohol">
+            <p style="float:left;"><b>Alcohol consumption in week: </b><span id="Alcohol_value">1</span></p>
+        </div>
+        <!-- smoking -->
+        <div class="smoking-container">
+            <div class="smoking-option">
+                <input type="radio" name="smoking" id="never" value="never">
+                <label for="never"></label>
+            </div>
+            <div class="smoking-option">
+                <input type="radio" name="smoking" id="quit_less_than_one_year_ago" value="quit_less_than_one_year_ago">
+                <label for="quit_less_than_one_year_ago"></label>
+            </div>
+            <div class="smoking-option">
+                <input type="radio" name="smoking" id="quit_one_two_nine_year_ago" value="quit_one_two_nine_year_ago">
+                <label for="quit_one_two_nine_year_ago"></label>
+            </div>
+            <div class="smoking-option">
+                <input type="radio" name="smoking" id="QuitGreaterThan10YearAgo" value="QuitGreaterThan10YearAgo">
+                <label for="QuitGreaterThan10YearAgo"></label>
+            </div>
+            <div class="smoking-option">
+                <input type="radio" name="smoking" id="StillHalfPackOrLess" value="StillHalfPackOrLess">
+                <label for="StillHalfPackOrLess"></label>
+            </div>
+            <div class="smoking-option">
+                <input type="radio" name="smoking" id="StillOnePack" value="StillOnePack">
+                <label for="StillOnePack"></label>
+            </div>
+            <div class="smoking-option">
+                <input type="radio" name="smoking" id="StillMoreThanOnePack" value="StillMoreThanOnePack">
+                <label for="StillMoreThanOnePack"></label>
+            </div>
+        </div>
+
+
+        <!-- DomesticEnvironment -->
+        <div class="DomesticEnvironment-container">
+            <div class="DomesticEnvironment-option">
+                <input type="radio" name="DomesticEnvironment" id="QuiteToxic" value="QuiteToxic">
+                <label for="QuiteToxic"></label>
+            </div>
+            <div class="DomesticEnvironment-option">
+                <input type="radio" name="DomesticEnvironment" id="PreferNotToSayDomesticEnvironment" value="PreferNotToSayDomesticEnvironment">
+                <label for="PreferNotToSayDomesticEnvironment"></label>
+            </div>
+            <div class="DomesticEnvironment-option">
+                <input type="radio" name="DomesticEnvironment" id="HealthyVibes" value="HealthyVibes">
+                <label for="HealthyVibes"></label>
+            </div>
+            <div class="DomesticEnvironment-option">
+                <input type="radio" name="DomesticEnvironment" id="Peaceful" value="Peaceful">
+                <label for="Peaceful"></label>
+            </div>
+            <div class="DomesticEnvironment-option">
+                <input type="radio" name="DomesticEnvironment" id="Uplifting" value="Uplifting">
+                <label for="Uplifting"></label>
+            </div>
+        </div>
+        <!-- Medication Consumption -->
+        <div class="MedicineConsumption-container">
+            <input type="range" min="0" max="5" value="1" class="MedicineConsumption" name="MedicineConsumption" id="MedicineConsumption">
+            <p style="float:left;"><b>Medicine Dosage Intensity:</b> <span id="MedicineConsumption_value">1</span></p>
+        </div>
+
+        <!-- Nutrition -->
+        <div class="Nutrition-container">
+            <div class="Nutrition-option">
+                <input type="radio" name="Nutrition" id="JunkFoodAddict" value="JunkFoodAddict">
+                <label for="JunkFoodAddict"></label>
+            </div>
+            <div class="Nutrition-option">
+                <input type="radio" name="Nutrition" id="HealthyForTheMostPart" value="HealthyForTheMostPart">
+                <label for="HealthyForTheMostPart"></label>
+            </div>
+            <div class="Nutrition-option">
+                <input type="radio" name="Nutrition" id="OnlyOnSelectedDates" value="OnlyOnSelectedDates">
+                <label for="OnlyOnSelectedDates"></label>
+            </div>
+            <div class="Nutrition-option">
+                <input type="radio" name="Nutrition" id="NoJunkFood" value="NoJunkFood">
+                <label for="NoJunkFood"></label>
+            </div>
+        </div>
+
+        <!-- SocialLife -->
+        <div class="SocialLife-container">
+            <div class="SocialLife-option">
+                <input type="radio" name="SocialLife" id="None" value="None">
+                <label for="None"></label>
+            </div>
+            <div class="SocialLife-option">
+                <input type="radio" name="SocialLife" id="Barely" value="Barely">
+                <label for="Barely"></label>
+            </div>
+            <div class="SocialLife-option">
+                <input type="radio" name="SocialLife" id="Healthy" value="Healthy">
+                <label for="Healthy"></label>
+            </div>
+            <div class="SocialLife-option">
+                <input type="radio" name="SocialLife" id="ManyCloseFriends" value="ManyCloseFriends">
+                <label for="ManyCloseFriends"></label>
+            </div>
+            <div class="SocialLife-option">
+                <input type="radio" name="SocialLife" id="SocialFreak" value="SocialFreak">
+                <label for="SocialFreak"></label>
+            </div>
+        </div>
+        <!-- Sleep Schedule -->
+        <div class="SleepSchedule-container">
+            <input type="range" min="0" max="12" value="7" class="SleepSchedule" name="SleepSchedule" id="SleepSchedule">
+            <p style="float:left;"><b>Hours of undisturbed sleep in a day:</b> <span id="SleepSchedule_value">7</span></p>
+        </div>
+        <!-- ChronicMentalHealth -->
+        <div class="ChronicMentalHealth-container">
+            <div class="ChronicMentalHealth-option">
+                <input type="radio" name="ChronicMentalHealth" id="Depressed-Pessimistic" value="Depressed-Pessimistic">
+                <label for="Depressed-Pessimistic"></label>
+            </div>
+            <div class="ChronicMentalHealth-option">
+                <input type="radio" name="ChronicMentalHealth" id="Stressed-Worried" value="Stressed-Worried">
+                <label for="Stressed-Worried"></label>
+            </div>
+            <div class="ChronicMentalHealth-option">
+                <input type="radio" name="ChronicMentalHealth" id="Complex" value="Complex">
+                <label for="Complex"></label>
+            </div>
+            <div class="ChronicMentalHealth-option">
+                <input type="radio" name="ChronicMentalHealth" id="Positive" value="Positive">
+                <label for="Positive"></label>
+            </div>
+            <div class="ChronicMentalHealth-option">
+                <input type="radio" name="ChronicMentalHealth" id="Calm" value="Calm">
+                <label for="Calm"></label>
+            </div>
+        </div>
+
+
+        <!-- <button type="button" onclick="">Redirect</button> -->
+        <!-- <p><br>
+            <a href="/home/outputPage" target="_blank" style="position:absolute; margin-top: 534vh;margin-left:91vh; ;font-size:57px;color:black; opacity: 0;"> <b>Sumbit</b> </a>
+        </p>
+        </a> -->
+        <button type="submit" style="position:absolute; margin-top: 570vh;margin-left:91vh; ;font-size:57px;color:black; opacity: 0;">Submit</button>
+    </form>
+
+
+    <script>
+        document.getElementById("Age").oninput = function() {
+            document.getElementById("Age_value").innerHTML = this.value;
+        }
+
+        document.getElementById("Weight").oninput = function() {
+            document.getElementById("Weight_value").innerHTML = this.value;
+        }
+
+        document.getElementById("Height").oninput = function() {
+            document.getElementById("Height_value").innerHTML = this.value;
+        }
+        document.getElementById("AnnualIncome").oninput = function() {
+            document.getElementById("AnnualIncome_value").innerHTML = this.value;
+        }
+        document.getElementById("Exercise").oninput = function() {
+            document.getElementById("Exercise_value").innerHTML = this.value;
+        }
+        document.getElementById("Alcohol").oninput = function() {
+            document.getElementById("Alcohol_value").innerHTML = this.value;
+        }
+        document.getElementById("MedicineConsumption").oninput = function() {
+            document.getElementById("MedicineConsumption_value").innerHTML = this.value;
+        }
+        document.getElementById("SleepSchedule").oninput = function() {
+            document.getElementById("SleepSchedule_value").innerHTML = this.value;
+        }
+    </script>
+</body>
+
+</html>

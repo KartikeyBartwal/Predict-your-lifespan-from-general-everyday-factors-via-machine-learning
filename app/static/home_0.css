@@ -1,0 +1,603 @@
+/* body {
+    background-image: "{% static '\Home.png' %} " #101728;
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* */
+
+.image-container {
+    position: absolute;
+    top: 0;
+    left: 8%;
+    right: 10%;
+    width: 80%;
+    /* height: 600px; */
+    overflow-y: scroll;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+}
+
+.parent {
+    display: flex;
+}
+
+.myVideo {
+    margin-left: auto;
+    width: 500px;
+    height: 900px;
+}
+
+
+/* Gender */
+
+.gender-container {
+    position: absolute;
+    width: 200vh;
+    height: 10vh;
+    size: 20%;
+    margin-top: 118vh;
+    padding: 0vh 77.3vh;
+    display: flex;
+    flex-direction: row;
+}
+
+input[type='radio'] {
+    width: 8vh;
+    height: 8vh;
+    /* margin-left: 5vh; */
+    margin-right: 25vh;
+    opacity: 100;
+    background-color: blue;
+    border: black;
+    z-index: 1;
+}
+
+
+/* Age */
+
+.Age-container {
+    position: absolute;
+    margin-top: 136vh;
+    margin-left: 60vh;
+    padding: 0 0;
+    width: 80vh;
+    height: 20vh;
+    font-size: 50px;
+    color: wheat
+}
+
+.Age {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 25px;
+    background: wheat;
+    outline: none;
+    opacity: 100;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.Age:hover {
+    opacity: 1;
+}
+
+.Age::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.Age::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+
+/* Weight */
+
+.Weight-container {
+    position: absolute;
+    margin-top: 156vh;
+    margin-left: 60vh;
+    padding: 0 0;
+    width: 80vh;
+    height: 20vh;
+    font-size: 50px;
+    color: wheat
+}
+
+.Weight {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 25px;
+    background: wheat;
+    outline: none;
+    opacity: 100;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.Weight:hover {
+    opacity: 1;
+}
+
+.Weight::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.Weight::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+
+/* Height */
+
+.Height-container {
+    position: absolute;
+    margin-top: 172vh;
+    margin-left: 60vh;
+    padding: 0 0;
+    width: 80vh;
+    height: 20vh;
+    font-size: 50px;
+    color: wheat
+}
+
+.Height {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 25px;
+    background: wheat;
+    outline: none;
+    opacity: 100;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.Height:hover {
+    opacity: 1;
+}
+
+.Height::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.Height::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+
+/* Marital Status */
+
+.MaritalStatus-container {
+    position: absolute;
+    width: 200vh;
+    height: 10vh;
+    size: 20%;
+    margin-top: 222vh;
+    padding: 0vh 64vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.MaritalStatus-container input[type='radio'] {
+    width: 10vh;
+    height: 10vh;
+    /* margin-left: 5vh; */
+    margin-right: 9.2vh;
+}
+
+
+/* Income */
+
+.AnnualIncome-container {
+    position: absolute;
+    margin-top: 260vh;
+    margin-left: 60vh;
+    padding: 0 0;
+    width: 80vh;
+    height: 20vh;
+    font-size: 50px;
+    color: wheat
+}
+
+.AnnualIncome {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 25px;
+    background: wheat;
+    outline: none;
+    opacity: 100;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.AnnualIncome:hover {
+    opacity: 1;
+}
+
+.AnnualIncome::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.AnnualIncome::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+
+/* Fitness */
+
+.fitness-container {
+    position: absolute;
+    width: 200vh;
+    height: 10vh;
+    size: 20%;
+    margin-top: 315vh;
+    padding: 0vh 65.2vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.fitness-container input[type='radio'] {
+    width: 8.4vh;
+    height: 8.4vh;
+    /* margin-left: 5vh; */
+    margin-right: 6.2vh;
+}
+
+
+/* Diabetic */
+
+.diabetic-container {
+    position: absolute;
+    width: 200vh;
+    height: 10vh;
+    size: 20%;
+    margin-top: 355vh;
+    padding: 0vh 76vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.diabetic-container input[type='radio'] {
+    width: 9vh;
+    height: 9vh;
+    /* margin-left: 5vh; */
+    margin-right: 26.18vh;
+}
+
+
+/* Smoking */
+
+.smoking-container {
+    position: absolute;
+    width: 200vh;
+    height: 10vh;
+    size: 20%;
+    margin-top: 407vh;
+    padding: 0vh 25.3vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.smoking-container input[type='radio'] {
+    width: 9vh;
+    height: 9vh;
+    /* margin-left: 5vh; */
+    margin-right: 7vh;
+}
+
+
+/* DomesticEnvironment */
+
+.DomesticEnvironment-container {
+    position: absolute;
+    width: 200vh;
+    height: 10vh;
+    size: 20%;
+    margin-top: 428vh;
+    padding: 0vh 64vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.DomesticEnvironment-container input[type='radio'] {
+    width: 9vh;
+    height: 9vh;
+    /* margin-left: 5vh; */
+    margin-right: 6vh;
+}
+
+
+/* Nutrition */
+
+.Nutrition-container {
+    position: absolute;
+    width: 200vh;
+    height: 10vh;
+    size: 20%;
+    margin-top: 492vh;
+    padding: 0vh 64.99vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.Nutrition-container input[type='radio'] {
+    width: 8vh;
+    height: 8vh;
+    /* margin-left: 5vh; */
+    margin-right: 11.7vh;
+}
+
+
+/* SocialLife */
+
+.SocialLife-container {
+    position: absolute;
+    width: 200vh;
+    height: 10vh;
+    size: 20%;
+    margin-top: 512vh;
+    padding: 0vh 65.3vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.SocialLife-container input[type='radio'] {
+    width: 8vh;
+    height: 8vh;
+    /* margin-left: 5vh; */
+    margin-right: 6.4vh;
+}
+
+
+/* ChronicMentalHealth */
+
+.ChronicMentalHealth-container {
+    position: absolute;
+    width: 200vh;
+    height: 10vh;
+    size: 20%;
+    margin-top: 545.6vh;
+    padding: 0vh 65.1vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.ChronicMentalHealth-container input[type='radio'] {
+    width: 8vh;
+    height: 8vh;
+    /* margin-left: 5vh; */
+    margin-right: 6.7vh;
+}
+
+
+/* Exercise */
+
+.Exercise-container {
+    position: absolute;
+    margin-top: 342vh;
+    margin-left: 60vh;
+    padding: 0 0;
+    width: 80vh;
+    height: 20vh;
+    font-size: 35px;
+    color: wheat
+}
+
+.Exercise {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 25px;
+    background: wheat;
+    outline: none;
+    opacity: 100;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.Exercise:hover {
+    opacity: 1;
+}
+
+.Exercise::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.Exercise::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+
+/* Alcohol */
+
+.Alcohol-container {
+    position: absolute;
+    margin-top: 395.7vh;
+    margin-left: 60vh;
+    padding: 0 0;
+    width: 80vh;
+    height: 20vh;
+    font-size: 35px;
+    color: wheat
+}
+
+.Alcohol {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 25px;
+    background: wheat;
+    outline: none;
+    opacity: 100;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.Alcohol:hover {
+    opacity: 1;
+}
+
+.Alcohol::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.Alcohol::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+
+/* MedicineConsumption */
+
+.MedicineConsumption-container {
+    position: absolute;
+    margin-top: 455vh;
+    margin-left: 60vh;
+    padding: 0 0;
+    width: 80vh;
+    height: 20vh;
+    font-size: 35px;
+    color: wheat
+}
+
+.MedicineConsumption {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 25px;
+    background: wheat;
+    outline: none;
+    opacity: 100;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.MedicineConsumption:hover {
+    opacity: 1;
+}
+
+.MedicineConsumption::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.MedicineConsumption::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+
+/* SleepSchedule*/
+
+.SleepSchedule-container {
+    position: absolute;
+    margin-top: 533vh;
+    margin-left: 60vh;
+    padding: 0 0;
+    width: 80vh;
+    height: 20vh;
+    font-size: 35px;
+    color: wheat
+}
+
+.SleepSchedule {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 25px;
+    background: wheat;
+    outline: none;
+    opacity: 100;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.SleepSchedule:hover {
+    opacity: 1;
+}
+
+.SleepSchedule::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.SleepSchedule::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+}

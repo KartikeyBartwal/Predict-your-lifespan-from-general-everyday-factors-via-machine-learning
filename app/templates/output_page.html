@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+    <style>
+        /* Life Expectancy estimation box */
+        
+        .output-box {
+            position: absolute;
+            margin-left: 80vh;
+            margin-right: 80vh;
+            width: 100vh;
+            height: 12vh;
+            padding: 0vh 0vh;
+            margin-top: 94.0vh;
+            box-sizing: border-box;
+            /* border: 2vh solid #00008b; */
+            border-radius: 4vh;
+            background-color: #add8e6;
+            font-size: 5vh;
+            font-style: Tahoma, sans-serif;
+            display: table;
+            table-layout: fixed;
+        }
+        
+        .output-box p {
+            position: absolute;
+            display: table-cell;
+            vertical-align: middle;
+            margin-left: 30%;
+            font-style: monospace;
+        }
+        /* Best performing areas */
+        
+        .output-box-best {
+            position: absolute;
+            margin-left: 70vh;
+            margin-right: 80vh;
+            width: 40vh;
+            height: 50vh;
+            padding: 0vh 0vh;
+            margin-top: 130.0vh;
+            box-sizing: border-box;
+            /* border: 2vh solid #00008b; */
+            border-radius: 4vh;
+            background-color: #add8e6;
+            font-size: 3vh;
+            font-style: sans-serif;
+            display: table;
+            table-layout: fixed;
+        }
+        
+        .output-box-best p {
+            position: absolute;
+            display: table-cell;
+            vertical-align: middle;
+            margin-left: 30%;
+        }
+        /* Fair performing areas */
+        
+        .output-box-fair {
+            position: absolute;
+            margin-left: 110.9vh;
+            margin-right: 80vh;
+            width: 40vh;
+            height: 50vh;
+            padding: 0vh 0vh;
+            margin-top: 130.0vh;
+            box-sizing: border-box;
+            /* border: 2vh solid #00008b; */
+            border-radius: 4vh;
+            background-color: #add8e6;
+            font-size: 3vh;
+            font-style: sans-serif;
+            display: table;
+            table-layout: fixed;
+        }
+        
+        .output-box-fair p {
+            position: absolute;
+            display: table-cell;
+            vertical-align: middle;
+            margin-left: 30%;
+        }
+        /* Poor performing areas */
+        
+        .output-box-poor {
+            position: absolute;
+            margin-left: 152vh;
+            margin-right: 70vh;
+            width: 40vh;
+            height: 50vh;
+            padding: 0vh 0vh;
+            margin-top: 130.0vh;
+            box-sizing: border-box;
+            /* border: 2vh solid #00008b; */
+            border-radius: 4vh;
+            background-color: #add8e6;
+            font-size: 3vh;
+            font-style: sans-serif;
+            display: table;
+            table-layout: fixed;
+        }
+        
+        .output-box-poor p {
+            position: absolute;
+            display: table-cell;
+            vertical-align: middle;
+            margin-left: 30%;
+        }
+        /* List items settings */
+        /* ul {
+            padding: 0;
+        }
+        
+        li {
+            margin-top: 2px;
+            margin-bottom: 2px;
+        } */
+        
+        .PerformanceArea {
+            font-weight: 900;
+        }
+    </style>
+
+</head>
+
+<!--  -->
+
+<body style="background-color: #04042c;">
+    <div class="image-container">
+        <img src="{% static '\images\Home.png' %}">
+        <img src="{% static '\images\output_page_analysis2.png' %}">
+        <!-- <img src="{% static '\images\blank pages for charts.png' %}">
+        <img src="{% static '\images\blank pages for charts.png' %}">
+        <img src="{% static '\images\blank pages for charts.png' %}">
+
+        <img src="{% static '\images\Stats.png' %}"> -->
+    </div>
+
+    <div class="output-box">
+        <p><pre> Your estimated life expectancy
+          is {{prediction}}-{{prediction_max}} years
+        </pre>
+        </p>
+    </div>
+    <!-- Great Performing Areas -->
+    <div class="output-box-best">
+        <p><pre><b class = "PerformanceArea"> Great Performing Areas</b>
+                {% for area in Performance.great_performing_areas %}
+   {{ area }}
+                {% endfor %}
+          </pre>
+        </p>
+    </div>
+    <!-- Fair Performing Areas -->
+    <div class="output-box-fair">
+        <p><pre><b class = "PerformanceArea"> Fair Performing Areas</b>
+            {% for area in Performance.fair_performing_areas %}
+    {{ area }}
+                         {% endfor %}
+                   </pre>
+        </p>
+    </div>
+
+    <!-- Poor Performing Areas -->
+    <div class="output-box-poor">
+        <p><pre><b class = "PerformanceArea">  Poor Performing Areas</b>
+                {% for area in Performance.poor_performing_areas %}
+  {{ area }}
+                             {% endfor %}
+                       </pre>
+        </p>
+    </div>
+    <img style="margin-top:200vh;margin-left:15vh;" src="{% static  '\Plottings\Alcohol.jpg' %} ">
+    <img style="margin-top:200vh;margin-left: 1vh;" src="{% static  '\Plottings\general_health.jpg' %} ">
+    <img style="margin-top:200vh;margin-left: 1vh;" src="{% static  '\Plottings\Workout.jpg' %} ">
+    <img style="margin-top:10vh;margin-left: 15vh;" src="{% static  '\Plottings\Smoking.jpg' %} ">
+    <img style="margin-top:10vh;margin-left: 1vh;" src="{% static  '\Plottings\Social Life.jpg' %} ">
+    <img style="margin-top:5vh;margin-left: 30vh;" src="{% static  '\Plottings\Nutrition.jpg' %} ">
+    <img style="margin-top:2vh;margin-left: 15vh;" src="{% static  '\Plottings\Mental Health.jpg' %} ">
+</body>
+
+</html>
